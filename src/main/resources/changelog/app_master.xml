@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+  <!-- ChangeSet to create the Bible table -->
+    <changeSet  author="NCT"  id="20240825-161301">
+        <createTable tableName="bible" schemaName="public">
+            <column name="id" type="INT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="book" type="INT"/>
+            <column name="chapter" type="INT"/>
+            <column name="verse" type="INT"/>
+            <column name="scripture" type="TEXT"/>
+            <column name="testament" type="TEXT"/>
+            <column name="book_short" type="TEXT"/>
+            <column name="book_nepali" type="TEXT"/>
+            <column name="book_english" type="TEXT"/>
+            <column name="version" type="INT"/>
+            <column name="istitle" type="INT"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="1" author="NCT">
+        <sqlFile path="data/bible_data.sql" />
+    </changeSet>
+</databaseChangeLog>
