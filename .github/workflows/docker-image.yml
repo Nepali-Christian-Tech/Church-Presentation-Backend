@@ -30,6 +30,12 @@ jobs:
         with:
           images: nepalichristiantech/church-presentation-backend
 
+      - name: Setup jdk 22
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'openjdk'
+          java-version: 22
+
       - name: Build and push Docker image
         id: push
         uses: docker/build-push-action@v3  # Updated to a stable version
