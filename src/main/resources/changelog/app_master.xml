@@ -23,7 +23,25 @@
         </createTable>
     </changeSet>
 
+    <changeSet  author="NCT"  id="20250107-161301">
+        <createTable tableName="songs" schemaName="public">
+            <column name="id" type="INT" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="song_code" type="TEXT"/>
+            <column name="title" type="TEXT"/>
+            <column name="url" type="TEXT"/>
+            <column name="lyrics" type="TEXT"/>
+            <column name="created_at" type="datetime"/>
+            <column name="updated_at" type="datetime"/>
+            <column name="deleted_at" type="datetime"/>
+        </createTable>
+    </changeSet>
+
     <changeSet id="1" author="NCT">
         <sqlFile path="data/bible_data.sql" />
+    </changeSet>
+    <changeSet id="2" author="NCT">
+        <sqlFile path="data/songs_data.sql" />
     </changeSet>
 </databaseChangeLog>
