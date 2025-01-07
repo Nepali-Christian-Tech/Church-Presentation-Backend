@@ -4,7 +4,7 @@ FROM openjdk:22-jdk
 # Set the working directory
 WORKDIR /app
 CMD ["./gradlew", "clean", "bootJar"]
-COPY build/libs/*.jar app.jar
+COPY build/libs/church-presentation-backend-0.0.1-SNAPSHOT.jar app.jar
 # Expose the application port
 EXPOSE 8080
 
