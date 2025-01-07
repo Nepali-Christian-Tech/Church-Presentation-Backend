@@ -24,6 +24,9 @@ jobs:
           distribution: 'adopt'
           java-version: 22
 
+      - name: Set executable permissions for Gradle wrapper
+        run: chmod +x ./gradlew
+
       - name: Build the JAR
         run: ./gradlew buildJar
 
