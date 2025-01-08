@@ -5,10 +5,12 @@ import lombok.Getter;
 import lombok.Setter;
 import net.nepalichristian.churchpresentationbackend.entity.Song;
 
+import java.io.Serializable;
+
 @Getter
 @Setter
 @Builder
-public class SongDTO {
+public class SongDTO implements Serializable {
     private Integer id;
     private String songCode;
     private String title;
