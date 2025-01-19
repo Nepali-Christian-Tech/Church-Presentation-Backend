@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/bible")
+@CrossOrigin("*")
 public class BibleController {
 
   private final BibleService bibleService;

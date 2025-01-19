@@ -24,7 +24,6 @@ public class BibleServiceImpl implements BibleService {
   }
 
   @Override
-  @Cacheable(value = "verses", key = "#book.concat('-').concat(#chapter)")
   public List<Bible> getVersesByBookAndChapter(int book, int chapter) {
     return bibleRepository.findByBookAndChapter(book, chapter);
   }
